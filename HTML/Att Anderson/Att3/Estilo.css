@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+ }
+
+body {
+    width: vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonOpenDialog {
+    padding: 15px;
+    border: 1px solid rgb(255, 0, 0);
+    border-radius: 10px;
+    cursor: pointer;
+    color : red;
+}
+
+.buttonOpenDialog:hover {
+    opacity: 1.0;
+}
+
+hr {
+    border: 1px;
+    border-top: 1px rgb(31, 36, 33);
+}
+
+.dialog-main {
+    width: 100vw;
+    position: fixed;
+    top: 100px;
+    display:  none;
+    z-index: inherit;
+    justify-content: center;
+}
+
+.dialog {
+    display: flex;
+    flex-direction: column;
+    padding: 35px;
+    background-color: rgb(25, 150, 123);
+    border-radius: 50px;
+    width: 40%;
+}
+
+.active {
+    display: flex;
+}
+
+.active, .dialog {
+    animation: dialog .5s;
+}
+
+@keyframes dialog {
+    from {
+        opacity: 0;
+        transform: translateY(0, -50px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}
+
+span {
+    margin: 15px auto;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.buttons button {
+    font-size: medium;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+} 
+
+.okButton { 
+    background-color: green !important;
+}
+
+.closeButton {
+    background-color: rgb(180, 59, 29) !important;
+}
